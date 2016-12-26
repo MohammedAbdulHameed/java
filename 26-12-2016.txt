@@ -1,0 +1,89 @@
+/* Prime numbers till user input */
+package github;
+import java.util.Scanner;
+class Primeno
+{
+   public static void main (String[] args)
+   {        
+      Scanner in = new Scanner(System.in);
+      int i ;
+      int num;
+      int count;
+      //Empty String
+      String  primeNumbers = "";
+      System.out.println("Enter the value of n:");
+      int n = in.nextInt();
+      for (i = 1; i <= n; i++)         
+      {                   
+          count=0;           
+         for(num =i; num>=1; num--)
+         {
+        if(i%num==0)
+        {
+        count = count+ 1;
+        }
+     }
+     if (count==2)
+     {
+        //Appended the Prime number to the String
+        primeNumbers = primeNumbers + i + " ";
+     }  
+      } 
+      System.out.println("Prime numbers from 1 to n are :");
+      System.out.println(primeNumbers);
+   }
+}
+
+
+
+OUTPUT 
+
+
+Enter the value of n:
+15
+Prime numbers from 1 to n are :
+2 3 5 7 11 13 
+
+________________________________________________________________________________________________
+
+
+/* palindrome of a string */
+
+
+package javaexamm;
+
+import java.util.Scanner;
+ 
+class Palindrome
+{
+   public static void main(String args[])
+   {
+      String original, reverse = "";
+      Scanner s = new Scanner(System.in);
+ 
+      System.out.println("Enter a string to check if it is a palindrome");
+      original = s.nextLine();
+ 
+      int length = original.length();
+ 
+      for ( int i = length - 1; i >= 0; i-- )
+         reverse = reverse + original.charAt(i);
+ 
+      if (original.equals(reverse))
+         System.out.println("Entered string is a palindrome.");
+      else
+         System.out.println("Entered string is not a palindrome.");
+ 
+   }
+}	
+
+
+OUTPUT
+
+
+
+Enter a string to check if it is a palindrome
+dead
+Entered string is not a palindrome.
+
+________________________________________________________________________________________________________

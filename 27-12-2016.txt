@@ -1,0 +1,364 @@
+/* word count of a string and charecters count of a string */
+
+package mohammedpractice;
+import java.util.Scanner;
+
+
+public class Chrcount 
+
+{
+	
+public static void main (String args[])
+{
+	Scanner s = new Scanner(System.in);
+	
+	
+	
+	System.out.println("please validate your String");
+String str = s.nextLine();
+
+
+ int str1 = str.length();
+ System.out.println("Number of Charaters in String :"+str1);
+ String split[] = str.split(" ");
+ 
+ System.out.println("word cound :" +split.length);
+}
+}
+
+
+output 
+
+
+please validate your String
+hello java
+Number of Charaters in String :10
+word count :2
+
+
+
+_________________________________________________________________________________________________________
+
+
+/* program to execute function of the ATM condition minimum balance is 500/- */
+
+
+package mohammedpractice;
+import java.util.Scanner;
+
+public class RBI 
+{
+float bal=500.0f;
+Scanner s=new Scanner(System.in);
+
+
+public void deposit()
+{
+	System.out.println("enter your deposit amount");
+	float amt = s.nextFloat();
+	if((amt%100==0)&&(amt<=50000))
+	{
+		bal=bal+amt;
+		System.out.println("your available balance is "+bal);
+	}
+	else if(amt>=50000)
+	{
+		System.out.println("enter you pan number");
+		long pan=s.nextLong();
+				
+	}}
+
+
+	public void withdraw()
+	{
+		System.out.println("enter the money to be withdraw");
+		float amt=s.nextFloat();
+		if(amt<=bal)
+		{
+		if((amt%100==0)&&(amt<=50000))
+		{
+			bal=bal-amt;
+			System.out.println("your available balance is "+bal);
+		}
+		}
+		else
+		{
+			System.out.println("Insuffisient fund");
+			System.out.println("Available bal is:"+bal);
+		}
+		}
+
+		public void balanceEn()
+		{
+			System.out.println("your current balance is :" +bal);
+		}
+		public void exit()
+		{
+			System.exit(0);
+		
+
+		}
+	
+public static void main(String args[])
+{
+	System.out.println(" Bank ATM");
+    System.out.println("Choose 1 for deposit");
+    System.out.println("Choose 2 for withraw");
+    System.out.println("Choose 3 for Check Balance");
+    System.out.println("Choose 4 for EXIT");
+Scanner s=new Scanner(System.in);
+{
+	
+	{
+		 System.out.print("Choose the operation you want to perform:");
+         int n = s.nextInt();
+        
+        RBI obj=new RBI();
+        
+         switch(n)
+	{
+		case 1:
+		{
+			
+			obj.deposit();
+			break;
+		}
+		
+		case 2:
+		{
+			obj.withdraw();
+			break;
+		}
+		case 3:
+		{
+			obj.balanceEn();
+			break;
+		}
+		case 4:
+		{
+			obj.exit();
+		}
+		}
+	}
+	}
+}
+}
+
+		
+output
+
+ Bank ATM
+Choose 1 for deposit
+Choose 2 for withraw
+Choose 3 for Check Balance
+Choose 4 for EXIT
+Choose the operation you want to perform:
+
+output for deposit
+
+Choose the operation you want to perform:1
+enter your deposit amount
+500
+your available balance is 1000.0
+
+
+output for withdraw
+
+Choose the operation you want to perform:2
+enter the money to be withdraw
+400
+your available balance is 100.0
+
+output for Check Balance
+
+Choose the operation you want to perform:3
+your current balance is :500.0
+
+___________________________________________________________________________________________
+
+/* to find the maximum value in a array */
+
+
+package javaexamm;
+
+import java.util.Scanner;
+public class Arrayl 
+{
+    public static void main(String[] args) 
+    {
+        int n, max;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter elements of array:");
+        for(int i = 0; i < n; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        max = a[0];
+        for(int i = 0; i < n; i++)
+        {
+            if(max < a[i])
+            {
+                max = a[i];
+            }
+        }
+        System.out.println("Maximum value:"+max);
+    }
+}
+
+
+output
+
+
+Enter number of elements in the array:2
+Enter elements of array:
+23
+32
+Maximum value:32
+
+
+
+______________________________________________________________________________________________
+
+
+
+/* swapping of two numbers  */
+
+
+
+package javaexamm;
+
+import java.util.Scanner;
+
+class Swapp
+{
+   public static void main(String args[])
+   {
+      int x, y, temp;
+      System.out.println("Enter x and y");
+      Scanner in = new Scanner(System.in);
+ 
+      x = in.nextInt();
+      y = in.nextInt();
+ 
+      System.out.println("Before Swapping "+x );
+      System.out.println("Before Swapping "+y );
+      temp = x;
+      x = y;
+      y = temp;
+ 
+      System.out.println("After Swapping  " +x );
+      System.out.println("Before Swapping "+y );
+   }
+   
+}
+
+
+
+output
+
+
+Enter x and y
+5
+8
+Before Swapping 5
+Before Swapping 8
+After Swapping  8
+Before Swapping 5
+
+
+
+_____________________________________________________________________________________________
+
+
+
+
+/* swapping of two numbers without third variable  */
+
+
+package javaexamm;
+import java.util.Scanner;
+public class Swap
+
+
+{
+ 
+        public static void main(String[] args) {
+Scanner s= new Scanner(System.in);                
+                int num1 = s.nextInt();
+                int num2 = s.nextInt();
+               
+                System.out.println("Before Swapping");
+                System.out.println("Value of num1 is :" + num1);
+                System.out.println("Value of num2 is :" +num2);
+               
+               
+                num1 = num1 + num2;
+                num2 = num1 - num2;
+                num1 = num1 - num2;
+               
+                System.out.println("Before Swapping");
+                System.out.println("Value of num1 is :" + num1);
+                System.out.println("Value of num2 is :" +num2);
+        }
+ 
+ 
+}
+  
+
+output
+
+
+2
+5
+Before Swapping
+Value of num1 is :2
+Value of num2 is :5
+Before Swapping
+Value of num1 is :5
+Value of num2 is :2
+
+
+
+
+_____________________________________________________________________________________________________
+
+
+
+/* if 123 is declared as integer then output should be 1+2+3 = 6   */
+
+
+package javaexamm;
+
+public class Sumd {
+	public static void main(String args[])
+	{
+	int sum = 0;
+	int n = 123;
+	{
+	while (n != 0) 
+	{
+	    int rem;
+	    rem = n % 10;
+	    sum = sum + rem;
+	    n = n / 10;
+	}
+	n = sum;
+	System.out.println("1+2+3 = " +sum);
+
+}
+}
+}
+
+
+
+
+output
+
+
+1+2+3 = 6
+
+
+_______________________________________________________________________________________________________		

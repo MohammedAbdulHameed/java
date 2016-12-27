@@ -83,7 +83,6 @@ OUTPUT
 
 
 Enter a string to check if it is a palindrome
-dead
-Entered string is not a palindrome.
-
+bob
+Entered string is a palindrome.
 ________________________________________________________________________________________________________

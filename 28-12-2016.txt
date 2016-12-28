@@ -1,0 +1,126 @@
+/* program for initilizing 5 array dynamically and to read , find length of the array  */
+
+package github;
+import java.util.Scanner;
+
+
+public class Array 
+{
+public static void main(String arge[])
+{
+Scanner in = new Scanner(System.in)	;
+
+int n[]= new int[5];
+
+for(int i=0;i<n.length;i++)
+	
+{
+	 n[i] =in.nextInt();
+}
+for(int c:n)
+{
+	System.out.println(c);
+}
+
+System.out.println( "lenght of the array \t : "  +n.length);
+System.out.println("specifying third element in the array \t: "   +n[3]);
+}
+
+}
+
+
+output
+
+
+23
+45
+67
+12
+78
+_________
+23
+45
+67
+12
+78
+lenght of the array 	 : 5
+specifying third element in the array 	: 12
+
+
+______________________________________________________________________________________________________
+
+
+/* Array size dynamically and elements */
+
+
+package github;
+
+import java.util.Scanner;
+
+class Midelement
+
+{
+    private Scanner s;
+
+ public	void myFunction() 
+	{
+        s = new Scanner (System.in);
+       
+        int x;
+
+        System.out.print ("Enter the size of the array: ");
+        x = s.nextInt();
+
+    int Array[] = new int[x];
+    
+    for(int i=0;i<Array.length;i++)
+    	
+    {
+    	 Array[i] =s.nextInt();
+    }
+    for(int c:Array)
+    {
+    	System.out.println(c);
+    }
+        
+
+    	   
+    	   
+       }
+	
+	public static void main(String args[])
+	{
+		Midelement z = new Midelement();
+		z.myFunction();
+		
+		
+	}
+    	   
+    }
+
+
+
+output
+
+
+
+Enter the size of the array: 6
+23
+34
+45
+56
+21
+78
+elements in the array 23
+elements in the array 34
+elements in the array 45
+elements in the array 56
+elements in the array 21
+elements in the array 78
+
+
+
+__________________________________________________________________________________________________
+
+
+

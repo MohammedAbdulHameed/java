@@ -1,0 +1,52 @@
+/* to count how many males & females are there */
+package github;
+import java.util.*;
+
+public class Case1 
+{
+public static void main(String aa[])
+{
+	Scanner obj =new Scanner (System.in);
+	System.out.println("enter the fields");
+	String arr[]=new String[10];
+	int count=0,ecount=0;
+			for(int i=0;i<arr.length;i++)
+			{
+				arr[i]=obj.next();
+			}
+
+			for(int i=0;i<arr.length;i++)
+			{
+				
+				if(arr[i].equals("male"))
+				{
+					count++;
+					
+				}
+				else
+				{
+					ecount++;
+				}
+			}
+				System.out.println("no of males :" +count);
+				System.out.println("no of females :" +ecount);
+}
+}
+
+
+output
+
+
+enter the fields
+male
+male
+female
+female
+male
+female
+female
+male
+female
+female
+no of males :4
+no of females :6
